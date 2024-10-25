@@ -1,0 +1,724 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background {
+    background: #04001C;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+/* NavBar e hamburger */
+
+.traceContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    z-index: 1001;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.trace {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.traceContainer.change .trace:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.traceContainer.change .trace:nth-child(2) {
+    opacity: 0;
+}
+
+.traceContainer.change .trace:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #04001C;
+    color: white;
+    font-size: 20px;
+    z-index: 1000;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.navBar.show {
+    display: flex;
+}
+
+/* Parte superiro, nome e frontend dev */
+
+.leftText {
+    color: white;
+    height: 70vh;
+}
+
+.leftText h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 20px;
+    margin-top: 50px;
+}
+
+.stacked-text {
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+.stars {
+    height: 500px;
+    width: auto;
+}
+
+.poeiracosmica {
+    height: 70vh;
+    position: relative;
+}
+
+.poeiracosmica .poeira {
+    width: 350px;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    right: 0%;
+}
+
+.poeiracosmica .foto {
+    position: absolute;
+    bottom: 30%;
+    right: 10%;
+    width: 150px;
+    height: auto;
+}
+
+.poeiracosmica .foto img {
+    width: 100%;
+    height: auto;
+}
+
+.star {
+    height: auto;
+    position: absolute;
+    bottom: 80%;
+    right: 70%;
+}
+
+.pinkPlanet {
+    position: absolute;
+    bottom: 0%;
+    right: 70%;
+    width: 100px;
+    height: auto;
+}
+
+.orangePlanet {
+    position: absolute;
+    bottom: 60%;
+    right: 10%;
+    height: 150px;
+    width: 150px;
+}
+
+.orangePlanet img {
+    width: 100%;
+    height: auto;
+}
+
+.star2 {
+    width: 25px;
+    height: auto;
+    position: absolute;
+    bottom: 0%;
+    right: 20%;
+}
+
+.star2 img {
+    width: 100%;
+    height: auto;
+}
+
+.bottomContainer {
+    height: 300px;
+    width: 500px;
+    background-color: blueviolet;
+}
+
+.cosmicClound {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(12, 40, 65);
+}
+
+.cosmicClound img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+}
+
+.bottom {
+    height: 200px;
+    width: 500px;
+    display: flex;
+}
+
+.frase {
+    color: white;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.frase p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 10px;
+}
+
+/* Botão para rolar para baixo */
+
+.clickToDownContainer { 
+    width: 50%;  
+    z-index: 1; 
+}
+
+.clickToDown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.clickButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrowButtonDown {
+    margin-left: 10px;
+    filter: invert(100%);
+}
+
+.arrowButtonDown img {
+    width: 80%;
+    cursor: pointer;
+}
+
+.cloundLeftDown {
+  background-image: url('imgEsvgs/vetoresBaixo.svg');
+  background-size: cover;
+  width: 600px; 
+  height: 150px; 
+  position: absolute;
+  bottom: 0px; 
+  right: 0px; 
+
+}
+
+.cloundLeftDown img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* main */
+
+.backgroundOfMain {
+    background: #04001C repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.backForms {
+    background: #04001C repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.boxDescription form {
+    margin: 20px;
+}
+
+.boxDescription form input,
+.boxDescription form textarea {
+    width: 100%;
+    height: 80%;
+    margin-bottom: 10px;
+}
+
+.boxDescription h3,
+.boxDescription p {
+    margin: 0 0 15px 0;
+}
+
+
+/* Seleção do tipo de projeto */
+
+.sectionBackground {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+.selection {
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.selection p {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+.typeOfProjectSection {
+    color: white;
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* caixinhas dos projetos */
+
+.box {
+    width: 350px;
+    height: 350px;
+    background-color: rgb(4, 42, 75);
+    border-radius: 5%;
+    align-items: center;
+    position: relative;
+    display: block;
+}
+
+.boxInside {
+    width: 300px;
+    height: 250px;
+    justify-content: center;
+    background-color: gray;
+    border-radius: 15%;
+    margin: auto;
+    position: relative;
+}
+
+.gifs {
+    width: 100%;
+    height: 100%;
+
+}
+
+.gifs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15%;
+}
+
+.box.expanded {
+    height: auto;
+}
+
+.expandableSection p {
+    display: none;
+}
+
+.description p {
+    color: white;
+    font-size: 20px;
+    width: 300px;
+    margin-top: 15px;
+    display: none;
+}
+
+.description h3 {
+    color: white;
+    font-size: 20px;
+    width: 300px;
+}
+
+.description img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    top: 270px;
+    left: 220px;
+}
+
+.aboutMe h1 {
+    margin: 0;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+
+/* arrow */
+
+.boxDescription {
+    background-color: rgb(4, 42, 75);
+    width: 500px;
+    height: auto;
+    border-radius: 18%;
+}
+
+.seeMoreButton.rotate {
+    transform: rotate(180deg);
+}
+
+.seeMoreButton {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 50px;
+}
+
+.projetos {
+    position: relative;
+    width: auto;
+}
+
+form {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.cometa {
+    width: 45px;
+    height: auto;
+    position: absolute;
+    bottom: 0%;
+    right: 40%;
+}
+
+.cometa img {
+    width: 100%;
+    height: auto;
+}
+
+.cometa1 {
+    width: 35px;
+    height: auto;
+    position: absolute;
+    bottom: 90%;
+    right: 20%;
+}
+
+.cometa1 img {
+    width: 100%;
+    height: auto;
+}
+
+
+.cometa2 {
+    width: 25px;
+    height: auto;
+    position: absolute;
+    bottom: 0%;
+    right: 80%;
+}
+
+.cometa2 img {
+    width: 100%;
+    height: auto;
+}
+
+.cometa3 {
+    width: 35px;
+    height: auto;
+    position: absolute;
+    bottom: 30%;
+    right: 90%;
+}
+
+.cometa3 img {
+    width: 100%;
+    height: auto;
+}
+
+
+.cometa4 {
+    width: 25px;
+    height: auto;
+    position: absolute;
+    bottom: 89%;
+    right: 95%;
+}
+
+.cometa4 img {
+    width: 100%;
+    height: auto;
+}
+
+
+.cometa5 {
+    width: 35px;
+    height: auto;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+}
+
+.cometa5 img {
+    width: 100%;
+    height: auto;
+}
+
+.cometa6 {
+    width: 25px;
+    height: auto;
+    position: absolute;
+    bottom: 60%;
+    right: 10%;
+}
+
+.cometa6 img {
+    width: 100%;
+    height: auto;
+}
+
+.cometa7 {
+    width: 35px;
+    height: auto;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+.cometa7 img {
+    width: 100%;
+    height: auto;
+}
+
+.place {
+    display: flex;
+    width: auto;
+    height: 25px;
+}
+
+.place img {
+    width: auto;
+    height: 100%;
+    justify-content: space-between;
+    filter: invert(100%) grayscale(100%);
+}
+
+.socialMedias {
+    display: flex;
+    width: auto;
+    height: 50px;
+    margin: 7px;
+}
+
+.socialMedias img {
+    width: auto;
+    height: 100%;
+    filter: invert(100%) grayscale(100%);
+}
+
+.footerName {
+    background-color: rgb(4, 42, 75);
+    color: white;
+    width: auto;
+    height: 70px;
+    align-items: center;
+}
+
+.footerName h1 {
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .background {
+        height: 68vh;
+    }
+
+    /*NavBar - Hamburger*/
+    .traceContainer {
+        visibility: visible;
+        position: fixed;
+    }
+
+    .navBar {
+        display: none;
+    }
+
+    .navBar.show {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+    }
+
+    .navBar .row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navBar .col-auto {
+        margin: 10px;
+        width: 100%;
+    }
+
+    
+
+    /*Nome e Função*/
+
+    .leftText {
+        height: 200px;
+        width: 100vw;
+        margin-top: 10px;
+    }
+
+    .leftText h1 {
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .stars {
+        height: 300px;
+        width: 250px;
+    }
+
+    .poeiracosmica {
+        height: 100px;
+    }
+
+    .poeiracosmica .poeira {
+        width: 300px;
+        bottom: -90%;
+        right: 15%;
+    }
+
+    .poeiracosmica .foto {
+        top: 20%;
+        right: 35%;
+        width: 100px;
+    }
+
+    .star {
+        bottom: 60%;
+        right: 30%;
+        height: 20px;
+        width: 50px;
+    }
+
+    .pinkPlanet {
+        width: 60px;
+    }
+
+    .orangePlanet {
+        height: 80px;
+        width: 80px;
+    }
+
+    .orangePlanet img {
+        width: 100%;
+    }
+
+    .star2 {
+        bottom: 0;
+        right: 20%;
+        height: 20px;
+        width: 15px;
+    }
+
+    .cosmicClound {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 250px;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .frase {
+        color: white;
+        height: 100px;
+        width: auto;
+        padding: 40px;
+        margin-left: -40px;
+    }
+
+    .explore {
+        color: white;
+        position: absolute;
+        z-index: 2;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+
+    .sectionBackground {
+        position: absolute;
+        width: 160%;
+        height: auto;
+    }
+
+
+    .selection {
+        width: 100%;
+        height: 60px;
+        position: relative;
+        z-index: 2;
+        font-size: 10px;
+    }
+
+    .boxDescription {
+        background-color: rgb(4, 42, 75);
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        border-radius: 18%;
+        box-sizing: border-box;
+    }
+
+    .clickToDownContainer { 
+        width: 50%;    
+        margin-top: 100px;
+    }
+}
