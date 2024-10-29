@@ -68,6 +68,10 @@ body {
 }
 
 /* Parte superiro, nome e frontend dev */
+a {
+    text-decoration: none;
+    color: white;
+}
 
 .leftText {
     color: white;
